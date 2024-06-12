@@ -7,7 +7,13 @@ const dotenv = require("dotenv").config();
 
 connectDb();
 const app= express();   
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://mycontacts-frontend.vercel.app/"],
+        methods:["GET", "POST", "DELETE", "PUT"],
+        credentials: true
+    }
+));
 const port = process.env.PORT || 5000;
 app.use(express.json()); //middleware, body parser for when client sends any data to server and 
                         //server has to parse that text, for eg, in createContacts
