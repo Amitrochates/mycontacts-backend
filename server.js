@@ -11,7 +11,6 @@ app.use(cors(
     {
         origin: ["https://mycontacts-frontend.vercel.app/", "http://localhost:5173/"],
         methods:["GET", "POST", "DELETE", "PUT"],
-        credentials: true
     }
 ));
 const port = process.env.PORT || 5000;
