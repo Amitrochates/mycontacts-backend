@@ -10,7 +10,7 @@ const app= express();
 app.use(express.json()); 
 app.use(cors(
     {
-        origin: ["https://mycontacts-frontend.vercel.app", "http://localhost:5173/"]
+        origin: ["https://mycontacts-frontend.vercel.app", "http://localhost:5174", "http://localhost:5173"]
     }
 ));
 const port = process.env.PORT || 5000;
